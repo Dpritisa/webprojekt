@@ -1,0 +1,48 @@
+<main></main>
+
+<div *ngIf="email">
+  <h1>User Profile</h1>
+
+  <form (ngSubmit)="saveChanges()">
+    <div class="column">
+      <div class="row">
+        <label>Email:</label>
+        <input class="not-writable" type="text" [value]="email" disabled />
+      </div>
+
+      <div class="row">
+        <label>Name:</label>
+        <input class="writable" type="text" [(ngModel)]="displayName" name="displayName" />
+      </div>
+
+      <div class="row">
+        <label>Photo:</label>
+        <input class="writable" type="file" (change)="onFileSelected($event)" />
+      </div>
+    </div>
+
+    <div *ngIf="photoURL">
+      <img [src]="photoURL" alt="User Photo" />
+    </div>
+    
+    <div class="row">
+    <div class="button-container">
+      <button type="submit" [disabled]="isLoading">Save Changes</button>
+    </div>
+      <div *ngIf="isLoading" class="spinner"></div>
+    </div>
+  </form>
+
+  <h1>Your Reservations</h1>
+  <ul class = "list-item" *ngIf="reservations.length > 0; else noReservations">
+    <li *ngFor="let reservation of reservations">
+      <p class = "reservation">{{ reservation.date }} - {{ reservation.time }}</p>
+      <div class="button-container">
+        <button (click)="cancelReservation(reservation.date, reservation.time)">Cancel Reservation</button>
+      </div>
+    </li>
+  </ul>
+  <ng-template #noReservations>
+    <h2>You have no reservations.</h2>
+  </ng-template>
+</div>

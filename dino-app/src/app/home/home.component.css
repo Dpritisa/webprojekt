@@ -1,0 +1,138 @@
+main {
+  max-width: 50rem;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.column{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.img{
+  max-width: 40%;
+}
+
+.row{
+  padding-left: 3%;
+  padding-right: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  max-width: 80%;
+  margin: 0 auto;
+  background-color: #F2BB76;
+  border-radius: 0.25rem;
+}
+
+.row2{
+  padding-left: 3%;
+  padding-right: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  max-width: 80%;
+  margin: 0 auto;
+  border-radius: 0.25rem;
+}
+
+
+.intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.intro h1 {
+  padding-top: 1%;
+  color: #000000;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.intro .restaurant-image {
+  display: block;
+  margin: 1.25rem auto;
+  max-width: 80%;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+.intro p {
+  color: #000000;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+.location, .contact, .delivery {
+  padding: 1%;
+  margin: 1%;
+  background-color: #F2BB76;
+  width: 33%;
+  height: 100%;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #000000;
+  border-radius: 0.25rem;
+  text-align: center;
+
+}
+
+h2 {
+  color: #000000;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.download-container {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.download-button {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.625rem 1.25rem;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .location, .contact, .delivery {
+    font-size: 0.75rem;
+  }
+  .row {
+    padding-top: 4%;
+    flex-direction: column;
+  }
+  h2 {
+    font-size: 160%;
+  }
+}

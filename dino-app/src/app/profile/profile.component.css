@@ -1,0 +1,154 @@
+main {
+  max-width: 50rem;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+h1 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  color: #000000;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+h2 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  color: #000000;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.reservation{
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+form {
+  background-color: #F2BB76;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+label {
+  color: #000000;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.column{
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  flex-direction: column;
+}
+
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.not-writable {
+  margin-left: 1%;
+  margin-bottom: 1%;
+  color: #030303;
+  border: none;
+  padding: 0.625rem;
+  border-radius: 0.25rem;
+  width: 50%;
+  font-size: 1rem;
+}
+
+.writable{
+  font-size: 1rem;
+  width: 50%;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  background-color: rgb(255, 219, 172);
+  color: #000000;
+  border: none;
+  padding: 0.625rem;
+  border-radius: 0.25rem;
+}
+
+p {
+  color: #000000;
+  font-size: 1rem;
+  margin: 0 auto;
+  padding-bottom: 1.25rem;
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #F2BB76;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 0.625rem;
+  max-width: 80%;
+  margin: 0.625rem auto;
+}
+
+li p {
+  color: #000000;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.1rem;
+}
+
+button:hover {
+  background-color: rgb(255, 220, 180);
+}
+
+.spinner {
+  border: 0.25rem solid rgba(0, 0, 0, 0.1);
+  border-left-color: #3498db;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  animation: spin 1s linear infinite;
+}
+
+@media (max-width: 600px) {
+  .list-item {
+    padding: 0.625rem;
+    margin: 0.625rem auto;
+  }
+}

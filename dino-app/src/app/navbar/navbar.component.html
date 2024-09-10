@@ -1,0 +1,37 @@
+<nav class="navbar">
+  <div class="navbar-brand">
+    <img src="logo.png" alt="Brand Logo" />
+    <span>Dino's Diner</span>
+  </div>
+
+  <ul class="navbar-links" id="navbar-links">
+    <li *ngIf="isUserLoggedIn()" [ngClass]="{'active': isActive('/profile')}">
+      <a routerLink="/profile">
+        <img src="profile.svg" alt="Profile Icon" />
+        <span>{{ displayName }}</span>
+      </a>
+    </li>
+
+
+    <li [ngClass]="{'active': isActive('/home')}">
+      <a routerLink="/home">
+        <img src="order.svg" alt="Order Icon" />
+        <span>Home</span>
+      </a>
+    </li>
+
+    <li *ngIf="isUserLoggedIn()" [ngClass]="{'active': isActive('/reservations')}">
+        <a routerLink="/reservations">
+          <img src="reservation.svg" alt="Order Icon" />
+          <span>Reservations</span>
+        </a>
+      </li>
+      <li class="separator"></li>
+
+    <li>
+      <a (click)="isUserLoggedIn() ? logout() : login()">
+        <img [src]="isUserLoggedIn() ? 'logout.svg' : 'logout.svg'" alt="Auth Icon" />
+      </a>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,96 @@
+main {
+    max-width: 50rem;
+    margin: 0 auto;
+    margin-top: 5rem;
+  }
+  
+  h1 {
+    margin-top: 1.25rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    color: #000000;
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+
+  h2 {
+    margin-top: 1.25rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    color: #000000;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .reservations-container {
+    max-width: 80%;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #F2BB76;
+    border-radius: 0.25rem;
+    text-align: center;
+  }
+  
+  .reservations-container p {
+    font-size: 1.2rem;
+    color: #000000;
+    margin-bottom: 1rem;
+  }
+  
+  .reservations-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  
+  .slot-container {
+    background-color: #ffffff;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .slot-container p {
+    font-size: 1.2rem;
+    color: #000000;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  .slot-container button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .slot-container button:hover {
+    background-color: #444444;
+  }
+  
+  .slot-container button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+
+  @media (max-width: 600px) {
+    .reservations-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .slot-container:nth-child(3), 
+    .slot-container:nth-child(4) {
+      margin-bottom: 2rem;
+    }
+    
+    .slot-container:nth-child(1):not(:nth-child(3)),
+    .slot-container:nth-child(2):not(:nth-child(4)) {
+      margin-bottom: 0;
+    }
+  }
+  
