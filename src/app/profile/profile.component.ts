@@ -6,6 +6,8 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { WeatherService } from './api-service/weather.service';
+
 
 @Component({
   selector: 'app-profile',
@@ -23,8 +25,10 @@ export class ProfileComponent implements OnInit {
   reservations: { date: string, time: string }[] = [];
   selectedFile: File | null = null;
   isLoading: boolean = false;
+  weather: any; 
+  city: string = 'Osijek'; 
 
-  constructor(private firebaseService: FirebaseService, private router: Router) {}
+  constructor(private weatherService: WeatherService,private firebaseService: FirebaseService, private router: Router) {}
 
   async ngOnInit() {
     const auth = this.firebaseService.getAuth();
@@ -32,12 +36,20 @@ export class ProfileComponent implements OnInit {
     auth.onAuthStateChanged(async (user) => {
       if (user) {
         await this.fetchUserData(user.email!);
-      
+        this.fetchWeather();
       } else {
         console.log('No user signed in, redirecting to login');
         this.router.navigate(['/']);
       }
     });
+  }
+
+  fetchWeather() {
+    this.weatherService.getWeather(this.city).subscribe(
+      (data) => {
+        this.weather = data;
+      }
+    );
   }
 
   onFileSelected(event: any) {

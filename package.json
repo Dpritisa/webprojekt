@@ -9,7 +9,6 @@
     "test": "ng test",
     "serve:ssr:dino-app": "node dist/dino-app/server/server.mjs",
     "build:ssr": "ng build && ng run dino-app:server"
-
   },
   "private": true,
   "dependencies": {

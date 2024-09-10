@@ -152,3 +152,12 @@ button:hover {
     margin: 0.625rem auto;
   }
 }
+
+.weather-content{
+  background-color: #F2BB76;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 0.625rem;
+  max-width: 80%;
+  margin: 0.625rem auto;
+}
